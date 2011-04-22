@@ -1,27 +1,27 @@
-mbed �� FeliCa Reader/Writer RC-S620S ���g��
+mbed で FeliCa Reader/Writer RC-S620S を使う
 
 
-source : github �ւ̃����N
+source : github へのリンク
 
-�Ȃ��� : RC-S620S ����o�Ă���s����mbed �ɂȂ���
+つなげ方 : RC-S620S から出ているピンをmbed につなげる
 
 S620S - mbed 
 (1)Vcc - Vcc
 (2)RXD - tx
 (3)TXD - rx
 (4)GND - GND
-(5)RESERVE - �ڑ��Ȃ�
+(5)RESERVE - 接続なし
 (6)PRS(GND) - GND
 
 
 
-�ȒP�ȏ���:
+簡単な準備:
 
-mbed �� mbed.org�œo�^���܂��B
+mbed を mbed.orgで登録します。
 
-USB�Ōq���ŁA�d�������ƃV���A���ʐM�����܂����A�V���A���ʐM������ɂ̓p�\�R�����Ƀh���C�o�\�t�g�����Ȃ��Ǝg���܂���̂Ł@������@�����ď��������Ēu���Ă��������B
+USBで繋いで、電源供給とシリアル通信をしますが、シリアル通信をするにはパソコン側にドライバソフトを入れないと使えませんので　こちら　を見て準備をして置いてください。
 
-�i������A�ɂ́���URL�̂ǂ��炩������΂������ȂƁB�j
+（こちら、には↓のURLのどちらかを入れればいいかなと。）
 
 http://mbed.org/handbook/Windows-serial-configuration
 http://mbed.org/handbook/Serial
