@@ -29,7 +29,7 @@ int main() {
 
     serial.baud(115200);
     serialready = 1;
-    pc.printf("Serial Ready.\n");
+    pc.printf("Serial Ready.\n\r");
 
     ret = 0;
     RCS620S felica;   
@@ -38,7 +38,7 @@ int main() {
         ret = felica.initDevice();
     }
     felicarwready = 1;
-    pc.printf("FeliCa Reader/Writer Ready.\n");
+    pc.printf("FeliCa Reader/Writer Ready.\n\r");
 
     wait(2);
 
