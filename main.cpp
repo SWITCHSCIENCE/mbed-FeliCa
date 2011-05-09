@@ -53,6 +53,8 @@ int main() {
         
         while (felica.polling(0xffff) == 0);
         cardread = 1;
+        felicarwready = 0;
+
         
         pc.printf("idm: ");
         for (loop = 7; loop >= 0; loop--){
@@ -68,6 +70,7 @@ int main() {
         
         wait(1);
         cardread = 0;
+        felicarwready = 1;
     }
 }
 
