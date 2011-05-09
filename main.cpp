@@ -4,7 +4,7 @@
  * Copyright 2011 SWITCHSCIENCE
  *
  */
- 
+
 #include <inttypes.h>
 #include "mbed.h"
 #include "RCS620S.h"
@@ -42,7 +42,7 @@ int main() {
 
     wait(2);
 
-    while (1) {
+	while (1) {
     
         pc.printf("Please FeliCa Touch!  ");
         
