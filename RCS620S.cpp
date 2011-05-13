@@ -5,7 +5,7 @@
  *
  * Rewrite for mbed
  *
- * Portions Copyright 2011 SWITCHSCIENCE
+ * modified by SWITCHSCIENCE
  * 
  */
 
