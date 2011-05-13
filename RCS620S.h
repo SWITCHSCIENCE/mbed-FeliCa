@@ -9,6 +9,7 @@
  * 
  */
 
+#include "mbed.h"
 #include <inttypes.h>
 
 #ifndef RCS620S_H_
@@ -62,10 +63,10 @@ private:
         uint16_t len);
     void flushSerial(void);
 
-    // int checkTimeout(unsigned long t0);
+    int checkTimeout(time_t t0);
 
 public:
-    unsigned long timeout;
+    time_t timeout;
     uint8_t idm[8];
     uint8_t pmm[8];
 };

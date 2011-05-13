@@ -328,19 +328,14 @@ int RCS620S::readSerial(
     uint16_t len)
 {
     uint16_t nread = 0;
-    unsigned long t0;
-    Timer timer;
-    timer.start();
-    t0 = timer.read_ms();
+    time_t t0 = time(NULL);
 
     while (nread < len) {
-        if ((timer.read_ms() - t0) >= this->timeout) {
-            timer.stop();
+        if ((checkTimeout(t0))) {
             return 0;
         }
 
         if (serial.readable() > 0) {
-            // data[nread] = Serial.read();
             data[nread] = serial.getc();
             nread++;
         }
@@ -349,24 +344,16 @@ int RCS620S::readSerial(
     return 1;
 }
 
-/*
-void flushSerial() {
-  int count = Serial.available();
-  for (int i=0; i < count; i++) { // for all the bytes waiting to be read
-    byte devNull= Serial.read();  // read each byte into a throwaway variable
-  }
-}
-*/
 
 void RCS620S::flushSerial(void)
 {
-    while( serial.readable() );    
+    while( serial.readable() );     
 }
 
-/*
-int RCS620S::checkTimeout(unsigned long t0)
+
+int RCS620S::checkTimeout(time_t t0)
 {
-    unsigned long t = millis();
+    time_t t = time(NULL);
 
     if ((t - t0) >= this->timeout) {
         return 1;
@@ -374,4 +361,3 @@ int RCS620S::checkTimeout(unsigned long t0)
 
     return 0;
 }
-*/
